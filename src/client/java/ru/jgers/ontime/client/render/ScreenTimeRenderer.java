@@ -14,21 +14,22 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import ru.jgers.ontime.OnTime;
+import ru.jgers.ontime.OnTemp;
+import ru.jgers.ontime.client.config.OnTempOptions;
 import ru.jgers.ontime.client.utils.WorldInfo;
 
 import java.awt.*;
 
 public class ScreenTimeRenderer {
 
-        /**Handler for serializing and deserializing information about included configs {@link ru.jgers.ontime.client.config.OnTImeOptions}
+        /**Handler for serializing and deserializing information about included configs {@link OnTempOptions}
          *
          */
 
         public static ConfigClassHandler<ScreenTimeRenderer> HANDLER = ConfigClassHandler.createBuilder(ScreenTimeRenderer.class)
-                .id(Identifier.of(OnTime.MOD_ID, "ontime_config"))
+                .id(Identifier.of(OnTemp.MOD_ID, "ontemp_config"))
                 .serializer(config -> GsonConfigSerializerBuilder.create(config)
-                        .setPath(FabricLoader.getInstance().getConfigDir().resolve("ontime.json5"))
+                        .setPath(FabricLoader.getInstance().getConfigDir().resolve("ontemp.json5"))
                         .setJson5(true)
                         .build())
                 .build();
@@ -88,7 +89,7 @@ public class ScreenTimeRenderer {
 
                         int bar_height = (int) (16 * TEXTURE_MULTIPLIER);
                         int bar_width = (int) (88 * TEXTURE_MULTIPLIER);
-                        Identifier bar_texture = Identifier.of(OnTime.MOD_ID, "textures/gui/classic_time_bar_v2.png");
+                        Identifier bar_texture = Identifier.of(OnTemp.MOD_ID, "textures/gui/classic_time_bar_v2.png");
                         int xRight = INDICATOR_ON_RIGHT ? context.getScaledWindowWidth() : 0;
 
                         int indicatorSize = (int) (8 * TEXTURE_MULTIPLIER);
@@ -133,28 +134,28 @@ public class ScreenTimeRenderer {
                                                 default -> "full_moon";
                                         };
                                         drawTip(context, MinecraftClient.getInstance().textRenderer,
-                                                Text.translatable("tip.ontime.show_moon_phase." + moon),
+                                                Text.translatable("tip.ontemp.show_moon_phase." + moon),
                                                 yText);
                                         yText = yText + fontHeight;
                                 }
 
                                 if (SHOW_TOTAL_TICKS) {
                                     drawTip(context, MinecraftClient.getInstance().textRenderer,
-                                                Text.translatable("tip.ontime.total_ticks", world.getTimeOfDay()),
+                                                Text.translatable("tip.ontemp.total_ticks", world.getTimeOfDay()),
                                                 yText);
                                         yText = yText + fontHeight;
                                 }
 
                                 if (SHOW_DAY_TICKS) {
                                         drawTip(context, MinecraftClient.getInstance().textRenderer,
-                                                Text.translatable("tip.ontime.day_ticks", WorldInfo.getThisDayTime(world)),
+                                                Text.translatable("tip.ontemp.day_ticks", WorldInfo.getThisDayTime(world)),
                                                 yText);
                                         yText = yText + fontHeight;
                                 }
 
                                 if (SHOW_DAY_COUNT) {
                                         drawTip(context, MinecraftClient.getInstance().textRenderer,
-                                                Text.translatable("tip.ontime.day_count", WorldInfo.getTotalDays(world)),
+                                                Text.translatable("tip.ontemp.day_count", WorldInfo.getTotalDays(world)),
                                                 yText);
                                 }
                         }

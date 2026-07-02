@@ -11,15 +11,15 @@ public class WorldInfo {
 
     public static Text getWeather(ClientWorld world) {
         if(world.isThundering()) {
-            return Text.translatable("tip.ontime.thunderstorm");
+            return Text.translatable("tip.ontemp.thunderstorm");
         }
 
         if(world.isRaining()) {
-            return Text.translatable("tip.ontime.rain");
+            return Text.translatable("tip.ontemp.rain");
         }
 
         else {
-            return Text.translatable("tip.ontime.clear");
+            return Text.translatable("tip.ontemp.clear");
         }
     }
 
