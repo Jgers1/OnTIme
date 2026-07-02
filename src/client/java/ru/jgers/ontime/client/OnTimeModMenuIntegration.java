@@ -1,0 +1,17 @@
+package ru.jgers.ontime.client;
+
+import com.terraformersmc.modmenu.api.ConfigScreenFactory;
+import com.terraformersmc.modmenu.api.ModMenuApi;
+import ru.jgers.ontime.client.config.OnTImeOptions;
+
+public class OnTimeModMenuIntegration implements ModMenuApi {
+
+    /**
+     * Opens the config screen via ModMenu
+     */
+
+    @Override
+    public ConfigScreenFactory<?> getModConfigScreenFactory() {
+        return OnTImeOptions::createGui;
+    }
+}
