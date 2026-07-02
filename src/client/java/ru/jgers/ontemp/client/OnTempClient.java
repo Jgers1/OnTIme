@@ -1,9 +1,9 @@
-package ru.jgers.ontime.client;
+package ru.jgers.ontemp.client;
 
 import net.fabricmc.api.ClientModInitializer;
-import ru.jgers.ontime.client.render.ScreenTimeRenderer;
+import ru.jgers.ontemp.client.render.ScreenTimeRenderer;
 
-public class OnTimeClient implements ClientModInitializer {
+public class OnTempClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {

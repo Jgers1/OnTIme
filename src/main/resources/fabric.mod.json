@@ -1,27 +1,27 @@
 {
 	"schemaVersion": 1,
-	"id": "ontime",
+	"id": "ontemp",
 	"version": "1.0.0",
-	"name": "OnTime",
+	"name": "OnTemp",
 	"description": "Configurable client-side mod that helps track time and some additional information about the world, such as weather, moon phases, etc. (Requires YetAnotherConfigLib (YACL) and ModMenu to work)",
 	"authors": [
-		"Jgers"
+		"Jgers1"
 	],
 	"contact": {
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Jgers1/OnTemp"
 	},
 	"license": "MIT",
-	"icon": "assets/ontime/icon.png",
+	"icon": "assets/ontemp/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"ru.jgers.ontime.OnTime"
+			"ru.jgers.ontemp.OnTemp"
 		],
 		"client": [
-			"ru.jgers.ontime.client.OnTimeClient"
+			"ru.jgers.ontemp.client.OnTempClient"
 		],
 		"modmenu": [
-			"ru.jgers.ontime.client.OnTimeModMenuIntegration"
+			"ru.jgers.ontemp.client.OnTempModMenuIntegration"
 		]
 	},
 	"depends": {

@@ -1,12 +1,12 @@
-package ru.jgers.ontime;
+package ru.jgers.ontemp;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class OnTime implements ModInitializer {
-	public static final String MOD_ID = "ontime";
+public class OnTemp implements ModInitializer {
+	public static final String MOD_ID = "ontemp";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
